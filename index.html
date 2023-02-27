@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBiscuit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+    <style>
+        :root{
+            --bg-color: #111;
+            --text-color: #fff;
+            --text-light-color: #aaa;
+            --accent-color-1: #9100ca;
+            --accent-color-2: #3615ca;
+
+            --font-weight-light: 200;
+            --font-weight-regular: 400;
+            --font-weight-medium: 500;
+
+            --font-family: 'Inter', sans-serif;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-family);
+            -webkit-user-drag: none;
+            -webkit-app-region: drag;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .welcome{
+            font-size: 3rem;
+            font-weight: var(--font-weight-light);
+            color: var(--text-light-color);
+            animation: welcome 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+        }
+
+        .brand{
+            font-size: 5rem;
+            font-weight: var(--font-weight-medium);
+            color: var(--text-color);
+            animation: brandcta 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+            background: linear-gradient(90deg, var(--accent-color-1), var(--accent-color-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 200%;
+            animation: brandgradient 5s ease infinite;
+            text-shadow: 0 0 10px -5px var(--accent-color-1);
+        }
+
+        .cta{
+            font-size: 1.2rem;
+            font-weight: var(--font-weight-light);
+            color: var(--text-light-color);
+            animation: brandcta 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+        }
+
+        .social{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+            animation: socials 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+            color: var(--text-light-color);
+            cursor: pointer;
+            font-size: 32px;
+        }
+
+        #particles-js{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .social i:nth-child(1){
+            animation-delay: 0.2s;
+        }
+        .social i:nth-child(2){
+            animation-delay: 0.4s;
+        }
+        .social i:nth-child(3){
+            animation-delay: 0.6s;
+        }
+
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        footer{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-light-color);
+            animation: footer 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+        }
+
+        footer p{
+            margin-bottom: 0.5rem;
+        }
+
+
+        @keyframes welcome{
+            0%{
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes brandcta{
+            0%{
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes brandgradient{
+            0%{
+                background-position: 0% 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes socials{
+            0%{
+                transform: scale(0) translateY(100px);
+                opacity: 0;
+            }
+            100%{
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes footer{
+            0%{
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <main>
+        <h1 class="welcome">Welcome to</h1>
+        <h1 class="brand">TechBiscuit</h1>
+        <p class="cta">There's nothing here yet... Check out our socials!</p>
+        <div class="social">
+            <a href="https://github.com/TechBiscuit" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+            <a href="https://twitter.com/TechBiscuits" target="_blank"><i class="fab fa-twitter fa-fw"></i></a>
+            <!-- <a href="about:blank"><i class="fab fa-mastodon fa-fw"></i></a> -->
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2023 TechBiscuit - A joint project between <a href="https://github.com/vomxy" target="_blank"><i class="fab fa-github fa-fw"></i>Vomxy</a> and <a href="https://github.com/benclementt" target="_blank"><i class="fab fa-github fa-fw"></i>BenClementt</a></p>
+    </footer>
+    
+</body>
+<!--Particle.js-->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+</script>
+</html>
