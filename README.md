@@ -1,2 +1,2 @@
-# TechBiscuits Splash
-#### Temporary Splash Page for [TechBiscuits.co](https://TechBiscuits.co)
+# TechBiscuit Splash
+#### Temporary Splash Page for [TechBiscuit.co](https://TechBiscuit.co)
