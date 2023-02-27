@@ -9,19 +9,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-
+    
     <style>
         :root{
             --bg-color: #111;
             --text-color: #fff;
             --text-light-color: #aaa;
             --accent-color-1: #9100ca;
-            --accent-color-2: #3615ca;
-
+            --accent-color-2: #260c9b;
+            
             --font-weight-light: 200;
             --font-weight-regular: 400;
             --font-weight-medium: 500;
-
+            
             --font-family: 'Inter', sans-serif;
         }
         *{
@@ -38,7 +38,7 @@
             -webkit-user-select: none;
             user-select: none;
         }
-
+        
         main{
             display: flex;
             flex-direction: column;
@@ -46,14 +46,14 @@
             align-items: center;
             height: 100vh;
         }
-
+        
         .welcome{
             font-size: 3rem;
             font-weight: var(--font-weight-light);
             color: var(--text-light-color);
             animation: welcome 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
         }
-
+        
         .brand{
             font-size: 5rem;
             font-weight: var(--font-weight-medium);
@@ -66,14 +66,14 @@
             animation: brandgradient 5s ease infinite;
             text-shadow: 0 0 10px -5px var(--accent-color-1);
         }
-
+        
         .cta{
             font-size: 1.2rem;
             font-weight: var(--font-weight-light);
             color: var(--text-light-color);
             animation: brandcta 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
         }
-
+        
         .social{
             display: flex;
             justify-content: center;
@@ -84,7 +84,7 @@
             cursor: pointer;
             font-size: 32px;
         }
-
+        
         #particles-js{
             position: absolute;
             top: 0;
@@ -92,7 +92,7 @@
             right: 0;
             bottom: 0;
         }
-
+        
         .social i:nth-child(1){
             animation-delay: 0.2s;
         }
@@ -102,12 +102,12 @@
         .social i:nth-child(3){
             animation-delay: 0.6s;
         }
-
+        
         a{
             text-decoration: none;
             color: inherit;
         }
-
+        
         footer{
             position: absolute;
             bottom: 0;
@@ -119,12 +119,24 @@
             color: var(--text-light-color);
             animation: footer 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
         }
-
+        
         footer p{
             margin-bottom: 0.5rem;
         }
-
-
+        
+        a:hover{
+            transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1.5s;
+            color: var(--accent-color-1);
+        }
+    
+        
+        a{
+            
+            transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1.5s;
+        }
+        
+        
+        
         @keyframes welcome{
             0%{
                 transform: translateY(-100px);
@@ -135,7 +147,7 @@
                 opacity: 1;
             }
         }
-
+        
         @keyframes brandcta{
             0%{
                 transform: translateY(100px);
@@ -146,7 +158,7 @@
                 opacity: 1;
             }
         }
-
+        
         @keyframes brandgradient{
             0%{
                 background-position: 0% 50%;
@@ -158,7 +170,7 @@
                 background-position: 0% 50%;
             }
         }
-
+        
         @keyframes socials{
             0%{
                 transform: scale(0) translateY(100px);
@@ -169,7 +181,7 @@
                 opacity: 1;
             }
         }
-
+        
         @keyframes footer{
             0%{
                 transform: translateY(100px);
@@ -180,7 +192,7 @@
                 opacity: 1;
             }
         }
-
+        
     </style>
 </head>
 <body>
@@ -194,9 +206,9 @@
             <a href="https://twitter.com/TechBiscuits" target="_blank"><i class="fab fa-twitter fa-fw"></i></a>
             <!-- <a href="about:blank"><i class="fab fa-mastodon fa-fw"></i></a> -->
         </div>
-
+        
     </main>
-
+    
     <footer>
         <p>© 2023 TechBiscuit - A joint project between <a href="https://github.com/vomxy" target="_blank"><i class="fab fa-github fa-fw"></i>Vomxy</a> and <a href="https://github.com/benclementt" target="_blank"><i class="fab fa-github fa-fw"></i>BenClementt</a></p>
     </footer>
